@@ -15,6 +15,31 @@
         .bold-text{
             font-weight: bold;
         }
+        .image-wrap{
+            position: relative;
+            margin-bottom: 200px;
+        }
+        .image-wrap img{
+            position: absolute;
+            transition: all .4s;
+        }
+        .image-wrap p{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* z-index: 1; */
+            text-decoration: underline;
+            margin-top: 100px;
+            transition: all .4s;
+            display: none;
+        }
+        .image-wrap:hover img{
+            filter: brightness(.3);
+        }
+        .image-wrap:hover p{
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -74,13 +99,22 @@
             <h3 class="center-align">Select a <i class="orange-text text-darken-4">Category</i></h3>
             <div class="row">
                 <div class="col l4">
-                    <img src="./img/cake-main.jpg" alt="" class="responsive-img">
+                    <div class="image-wrap">
+                        <img src="./img/cake-main.jpg" alt="" class="responsive-img appear">
+                        <p class="flow-text white-text bold-text">cakes></p>
+                    </div>
                 </div>
                 <div class="col l4">
-                    <img src="./img/chicken-main.jpg" alt="" class="responsive-img">
+                    <div class="image-wrap">
+                        <img src="./img/chicken-main.jpg" alt="" class="responsive-img appear">
+                        <p class="flow-text white-text bold-text">Chicken></p>
+                    </div>
                 </div>
                 <div class="col l4">
-                    <img src="./img/soup-main.jpg" alt="" class="responsive-img">
+                    <div class="image-wrap">
+                        <img src="./img/soup-main.jpg" alt="" class="responsive-img appear">
+                        <p class="flow-text white-text bold-text">Soups></p>
+                    </div>
                 </div>
             </div>
         </div>
